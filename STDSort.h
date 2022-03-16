@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-void STDSort(int a[],int n){
+void STDSort(double a[],int n){
     sort(a,a+n);
 }
