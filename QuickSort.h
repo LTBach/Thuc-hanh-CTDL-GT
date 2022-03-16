@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 int partition(double arr[],int low,int high)
 {
     double pivot=arr[high];
