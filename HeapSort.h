@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
-using namespace std;
-void heapify(int arr[],int n,int i)
+void heapify(double arr[],int n,int i)
 {
     int largest=i;
     int l=2*i+1;
@@ -14,7 +13,7 @@ void heapify(int arr[],int n,int i)
         heapify(arr,n,largest);
     }
 }
-void heapSort(int arr[], int n)
+void HeapSort(double arr[], int n)
 {
     for(int i=n/2-1;i>=0;i--)
         heapify(arr, n, i);
