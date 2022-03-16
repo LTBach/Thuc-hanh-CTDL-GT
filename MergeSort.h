@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
-void merge(int arr[], int l, int m, int r){
+void merge(double arr[], int l, int m, int r){
     int i,j,k;
     int n1=m-l+1;
     int n2=r-m;
-    int L[n1],R[n2];
+    double L[n1],R[n2];
     for(i=0;i<n1;i++){
     	L[i]=arr[l+i];
 	}  
@@ -35,11 +35,15 @@ void merge(int arr[], int l, int m, int r){
         k++;
     }
 }
-void MergeSort(int a[], int l, int r){
+void MergeSort(double a[], int l, int r){
     if (l < r){
         int m = l+(r-l)/2;
-        mergeSort(a, l, m);
-        mergeSort(a, m+1, r);
+        MergeSort(a, l, m);
+        MergeSort(a, m+1, r);
         merge(a, l, m, r);
     }
+}
+void MergeSort(double a[], int n)
+{
+    MergeSort(a,0,n-1);
 }
